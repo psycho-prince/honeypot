@@ -14,3 +14,11 @@ instance/
 
 # Database
 *.sqlite3
+# .gitignore
+*.pyc
+__pycache__/
+venv/
+*.log
+lk
+lk.pub
+lk

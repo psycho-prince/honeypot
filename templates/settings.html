@@ -1,0 +1,9 @@
+<!-- templates/settings.html -->
+<form method="POST" action="/admin/settings">
+    <label for="host">Host:</label>
+    <input type="text" id="host" name="host" value="{{ config['HOST'] }}" required>
+    <label for="port">Port:</label>
+    <input type="number" id="port" name="port" value="{{ config['PORT'] }}" required>
+    <button type="submit">Save Settings</button>
+</form>
+

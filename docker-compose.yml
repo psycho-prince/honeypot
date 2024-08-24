@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SECRET_KEY=your_secret_key
+      - MAIL_USERNAME=your_mail_username
+      - MAIL_PASSWORD=your_mail_password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"

@@ -27,7 +27,7 @@ mail = Mail(app)
 # Configure Redis for rate limiting
 redis_client = redis.Redis(
     host=os.environ.get('REDIS_HOST', 'localhost'),
-    port=os.environ.get('REDIS_PORT', 6379),
+    port=os.environ.get('REDIS_PORT', 8080),
     db=0
 )
 
@@ -35,7 +35,7 @@ redis_client = redis.Redis(
 limiter = Limiter(
     get_remote_address,
     app=app,
-    storage_uri=f"redis://{os.environ.get('REDIS_HOST', 'localhost')}:{os.environ.get('REDIS_PORT', 6379)}"
+    storage_uri=f"redis://{os.environ.get('REDIS_HOST', 'localhost')}:{os.environ.get('REDIS_PORT', 8080)}"
 )
 
 # Initialize Flask-Login

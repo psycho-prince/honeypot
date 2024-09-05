@@ -6,6 +6,6 @@ class Config:
 # config.py
 class Config:
     HOST = '0.0.0.0'
-    PORT = 80
+    PORT = 8080
     LOGGING_LEVEL = 'INFO'
     ALLOWED_IPS = ['127.0.0.1']  # Example allowed IPs

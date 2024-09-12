@@ -9,7 +9,7 @@ A Flask-based honeypot system to simulate PHP login pages and capture attack att
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/flask_honeypot.git
-    cd flask_honeypot
+    cd honeypot
     ```
 
 2. Create and activate a virtual environment:
